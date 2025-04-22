@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CAP 809 - Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+  <header class="bg-blue-600 text-white p-4 shadow-md">
+    <div class="container mx-auto flex justify-between items-center">
+      <button id="back" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition duration-300">Back</button>
+      <h1 id="chatWith" class="text-xl font-semibold"></h1>
+    </div>
+  </header>
+  <div class="container mx-auto p-6">
+    <div id="chatBox" class="bg-white p-6 rounded-lg shadow-md h-96 overflow-y-auto mb-6"></div>
+    <form id="messageForm" class="flex space-x-4">
+      <input type="text" id="messageInput" class="flex-1 p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Type a message...">
+      <button type="submit" class="bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition duration-300">Send</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/chat.js"></script>
+</body>
+</html>
